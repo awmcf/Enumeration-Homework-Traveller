@@ -27,10 +27,18 @@ Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
 };
 
 Traveller.prototype.calculateTotalDistanceTravelled = function () {
-
+  return this.journeys.reduce((total, journey) => {
+    return total += journey.distance;
+  }, 0)
 };
 
+
 Traveller.prototype.getUniqueModesOfTransport = function () {
+  const modesofTransport = ["1", "1", "2", "3", "3", "1"];
+  const unique = modesofTransport.filter(function(item, i, ar){
+
+
+return ar.indexOf(item) === i; });
 
 };
 
